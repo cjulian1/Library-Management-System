@@ -1,7 +1,7 @@
 package booksort;
 
 public class BubbleSort{
-    public static String[] sort(String[] nameArray, int[] propertyArray){
+    public static String[] sort(String[] nameArray, int[] propertyArray){    // Sorts an array of Integers using bubble sort
         Boolean sorted = false;
         int propTemp1;
         int propTemp2;
@@ -28,7 +28,7 @@ public class BubbleSort{
         return nameArray;
     }
     
-    public static String[] sortString(String[] nameArray, String[] propertyArray){
+    public static String[] sortString(String[] nameArray, String[] propertyArray){    // Sorts an array of Strings using bubble sort
         Boolean sorted = false;
         String propTemp1;
         String propTemp2;
@@ -54,7 +54,7 @@ public class BubbleSort{
         return nameArray;
     }
     
-    public static String[] sortLong(String[] nameArray, long[] propertyArray){
+    public static String[] sortLong(String[] nameArray, long[] propertyArray){    // Sorts an array of Longs using bubble sort
         Boolean sorted = false;
         long propTemp1;
         long propTemp2;
