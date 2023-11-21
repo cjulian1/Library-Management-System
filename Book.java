@@ -4,13 +4,15 @@ public class Book
     private String author;
     private String category;
     private int ISBN; //ISBN gives interesting output
+    private boolean availability;
 
-    public Book(String title, String author, String category, int ISBN)
+    public Book(String title, String author, String category, int ISBN, boolean availability)
     {
         this.title = title;
         this.author = author;
         this.category = category;
         this.ISBN = ISBN;
+        this.availability = availability;
     }
 
     //Getter methods
@@ -29,6 +31,8 @@ public class Book
     public int getISBN(){
         return ISBN;
     }
+
+    public boolean getAvailability(){return availability;}
 
     //Setter methods
 
@@ -51,9 +55,11 @@ public class Book
         this.ISBN = ISBN;
     }
 
+    public void setAvailability(boolean availability){ this.availability = availability;}
+
     @Override
     public String toString() //Incorrect format?
     {
-        return ("Author: " + author + "\nTitle: " + title + "\nCategory: " + category + "\nISBN:" + ISBN);
+        return ("Author: " + author + "\nTitle: " + title + "\nCategory: " + category + "\nISBN:" + ISBN + "\nAvailability: " + availability);
     }
 }

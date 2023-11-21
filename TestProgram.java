@@ -28,7 +28,7 @@ public class TestProgram
                 String category = scanner.nextLine();
                 System.out.println("Enter ISBN");
                 int ISBN = scanner.nextInt();
-                sort.addBook(new Book(title, author, category, ISBN));
+                sort.addBook(new Book(title, author, category, ISBN, availability));
             } else if(choice == 2)
             {
                 System.out.println("Enter ISBN of book to remove: ");

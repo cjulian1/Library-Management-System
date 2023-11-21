@@ -1,25 +1,65 @@
-public class UpdateBooks
+import java.util.ArrayList;
+
+public class UpdateBooks implements SortBooks
 {
-    //Add books
-
-    //Remove books
-
-    //Search books
-
-    //Maybe go ahead and add transactions class to this?
 
     //Check out books
-    /*set as is available and that determines if it gets checked out
-    Limit the amount of books that can be checked out.
-    if(something = 3)
+    public void checkOutBook(int ISBN)
     {
-        system.out.println("Maximum books checked out has already been reached.");
+        for(Book book : books)
+        {
+            if(book.getISBN())
+            {
+                if(book.getAvailability() == true)
+                {
+                    book.setAvailability(false);
+                    System.out.println("Book check out successful!");
+                }
+                else
+                {
+                    System.out.println("Book currently not available");
+                }
+                return;
+
+            }
+        }
+        System.out.println("Book not found.");
     }
-     */
 
     //Return books
-}
+    public void returnBook(int ISBN)
+    {
+        for(Book book : books)
+        {
+            if(book.getISBN())
+            {
+                if(book.getAvailability() == false)
+                {
+                    book.setAvailability(true);
+                    System.out.println("Book returned successfully!");
+                }
+                else
+                {
+                    System.out.println("Book is already checked in.");
+                }
+                return;
+            }
+        }
+        System.out.println("Book not found.");
+    }
 
-/*
-store books within an array
- */
+    //Show book availability
+    public void bookAvailability(int ISBN, boolean availability)
+    {
+        for(Book book : books)
+        {
+            if(book.getISBN())
+            {
+                book.setAvailability(availability);
+                System.out.println("Availability updated for: " + ISBN);
+                return;
+            }
+        }
+        System.out.println("Book not found.");
+    }
+}

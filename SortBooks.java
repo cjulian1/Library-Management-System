@@ -1,10 +1,10 @@
 import java.util.ArrayList;
 import java.util.Locale;
 
-public class SortBooks
+public class SortBooks extends Book
 {
     //using ArrayList
-    private ArrayList<Book> books;
+    public ArrayList<Book> books;
 
     public SortBooks()
     {
@@ -48,10 +48,51 @@ public class SortBooks
     }
 
     //Sort by title
+    public void searchTitle(String keyword)
+    {
+        for(Book book : books)
+        {
+            book.getTitle().toLowerCase().contains(keyword.toLowerCase());
+        }
+    }
 
     //sort by author
+    public void searchAuthor(String keyword)
+    {
+        for(Book book : books)
+        {
+            book.getAuthor().toLowerCase().contains(keyword.toLowerCase());
+        }
+
+    }
 
     //sort by category
+    public void searchCategory(String keyword)
+    {
+        for(Book book : books)
+        {
+            book.getCategory().toLowerCase().contains(keyword.toLowerCase());
+        }
+
+    }
 
     //sort by ISBN
+    public void searchISBN(int keyword) //??
+    {
+        for(Book book : books)
+        {
+            book.getISBN();
+        }
+
+    }
+
+    // sort by availability?
+    public void sortAvailability()
+    {
+        for(Book book : books)
+        {
+            book.getAvailability();
+        }
+
+    }
 }
