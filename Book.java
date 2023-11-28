@@ -1,21 +1,33 @@
-public class Book
-{
-    private String title;
-    private String author;
-    private String category;
-    private int ISBN; //ISBN gives interesting output
-    private boolean availability;
+package booksort;
 
-    public Book(String title, String author, String category, int ISBN, boolean availability)
-    {
-        this.title = title;
-        this.author = author;
-        this.category = category;
-        this.ISBN = ISBN;
-        this.availability = availability;
+public class Book {
+    String title;
+    String author;
+    String genre;
+    String ISBN;
+    String availability;
+    int ID = 0;
+    
+    Book(String title, String author, String genre, String ISBN, String availability){
+        if(!title.equalsIgnoreCase("null") && !title.equalsIgnoreCase("") && !author.equalsIgnoreCase("null") && !author.equalsIgnoreCase("") && !genre.equalsIgnoreCase("null") && !genre.equalsIgnoreCase("") && (availability.matches("true") || availability.matches("false")) && ISBN.matches("\\d+")){
+            this.title = title;
+            this.author = author;
+            this.genre = genre;
+            this.ISBN = ISBN;
+            this.availability = availability;
+            this.ID = Sorting.ID;
+            Sorting.ID++;
+            String[] properties = {"", "", "", "", "", ""};
+            properties[0] = this.title;
+            properties[1] = this.author;
+            properties[2] = this.genre;
+            properties[3] = this.ISBN;
+            properties[4] = this.availability;
+            properties[5] = Integer.toString(this.ID);
+            Sorting.addBook(properties);
+        }
     }
-
-    //Getter methods
+    
     public String getTitle(){
         return title;
     }
@@ -24,15 +36,15 @@ public class Book
         return author;
     }
 
-    public String getCategory(){
-        return category;
+    public String getGenre(){
+        return genre;
     }
 
-    public int getISBN(){
+    public String getISBN(){
         return ISBN;
     }
 
-    public boolean getAvailability(){return availability;}
+    public String getAvailability(){return availability;}
 
     //Setter methods
 
@@ -45,21 +57,18 @@ public class Book
         this.author = author;
     }
 
-    public void setCategory(String category)
+    public void setGenre(String genre)
     {
-        this.category = category;
+        this.genre = genre;
     }
 
-    public void setISBN(int ISBN)
+    public void setISBN(String ISBN)
     {
         this.ISBN = ISBN;
     }
-
-    public void setAvailability(boolean availability){ this.availability = availability;}
-
-    @Override
-    public String toString() //Incorrect format?
+    
+    public void setAvailability(String ISBN)
     {
-        return ("Author: " + author + "\nTitle: " + title + "\nCategory: " + category + "\nISBN:" + ISBN + "\nAvailability: " + availability);
+        this.ISBN = ISBN;
     }
 }

@@ -4,6 +4,8 @@ import java.util.ArrayList;
 
 public class Sorting implements Sortable {
     
+    public static int ID = 0;
+    
     public static Boolean sortHighToLow = false;
     
     public static ArrayList<String[]> bookList = new ArrayList<>();     // Create String ArrayList for each book to be put into
@@ -226,4 +228,5 @@ public class Sorting implements Sortable {
             sortHighToLow = false;
         }
     }
+    
 }
