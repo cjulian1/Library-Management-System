@@ -38,4 +38,5 @@ Edit user:
 
 Add/edit user:
 - Open the users.txt file and add/edut a row using the following format:
-- \[username, password, 0 or 1 (0 if admin, 1 if regular user), contact info, checked out book IDs...]
+
+\[username, password, 0 or 1 (0 if admin, 1 if regular user), contact info, checked out book IDs...]
