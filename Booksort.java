@@ -20,8 +20,12 @@ public class Booksort {
         
         System.out.println("starting gui...");
         
-        NewGUI gui = new NewGUI();
-        gui.setVisible(true);
+        //NewGUI gui = new NewGUI();
+        //gui.setVisible(true);
+        
+        LoginScreen login = new LoginScreen();
+        login.setVisible(true);
+        
         //for(int i = 0; i < 100000; i++){
         //    System.out.println(i);
         //}
