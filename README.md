@@ -37,7 +37,5 @@ Edit user:
 - To apply changes, click the “Update User” button
 
 Add/edit user:
-
-Open the users.txt file and add/edut a row using the following format:
-
+- Open the users.txt file and add/edut a row using the following format: 
 \[username, password, 0 or 1 (0 if admin, 1 if regular user), contact info, checked out book IDs...]
